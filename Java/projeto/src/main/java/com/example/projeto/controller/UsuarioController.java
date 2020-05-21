@@ -10,6 +10,7 @@ import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,11 +26,13 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioRepository _usuarioRepository;
 
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/usuario", method = RequestMethod.GET)
 	public List<Usuario> Get() {
 		return _usuarioRepository.findAll(Sort.by(Sort.Direction.ASC, "nome"));
 	}
 
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/usuario/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Usuario> GetById(@PathVariable(value = "id") long id) {
 		Optional<Usuario> usuario = _usuarioRepository.findById(id);
@@ -39,11 +42,13 @@ public class UsuarioController {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/usuario", method = RequestMethod.POST)
 	public Usuario Post(@Valid @RequestBody Usuario usuario) {
 		return _usuarioRepository.save(usuario);
 	}
 
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/usuario/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<Usuario> Put(@PathVariable(value = "id") long id, @Valid @RequestBody Usuario newUsuario) {
 		Optional<Usuario> oldUsuario = _usuarioRepository.findById(id);
