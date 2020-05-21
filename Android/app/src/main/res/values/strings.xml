@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppProjeto</string>
+    <string name="action_settings">Settings</string>
+    <string name="usuario_cadastrousuariostr">Usuários</string>
+    <string name="nenhumdadostr">Nenhum dado encontrado</string>
+    <string name="usuario_lblcodigo">Código</string>
+    <string name="usuario_lblnome">Nome</string>
+    <string name="usuario_lbldatanascimento">Nascimento</string>
+    <string name="usuario_lblfoto">Foto</string>
+    <string name="usuario_usuarioalertainformeonomestr">Informe o usuário</string>
+</resources>
