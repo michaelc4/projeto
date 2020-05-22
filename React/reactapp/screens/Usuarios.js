@@ -10,13 +10,13 @@ export default class UsuariosScreen extends React.PureComponent {
     }
 
     state = {
-        data: []
+        dados: []
     }
 
     async componentDidMount() {
         const response = await fetch(`http://192.168.92.1:8080/projeto/usuario`)
         const responseJson = await response.json()
-        this.setState({ data: responseJson })
+        this.setState({ dados: responseJson })
     }
 
     _renderItem = ({ item }) => {
@@ -64,7 +64,7 @@ export default class UsuariosScreen extends React.PureComponent {
         return (
             <View style={{ flex: 1 }}>
                 <FlatList
-                    data={this.state.data}
+                    data={this.state.dados}
                     renderItem={this._renderItem}
                     keyExtractor={(item) => item.codigo.toString()}
                     ItemSeparatorComponent={() =>
