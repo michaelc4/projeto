@@ -23,7 +23,7 @@ public class Usuario {
 
 	@Basic
 	@Temporal(TemporalType.DATE)
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private Date data;
 
 	private String foto;

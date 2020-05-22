@@ -3,6 +3,7 @@ import { TouchableOpacity, View, FlatList, Text, Image } from 'react-native'
 import { getParsedDate } from '../util/Util'
 import { SEMIMAGEM } from '../image/image'
 import { Icon } from 'react-native-elements'
+import { EventRegister } from 'react-native-event-listeners'
 
 export default class UsuariosScreen extends React.PureComponent {
     static navigationOptions = {
@@ -14,6 +15,17 @@ export default class UsuariosScreen extends React.PureComponent {
     }
 
     async componentDidMount() {
+        this.loadData()
+        this.listener = EventRegister.addEventListener('reloadData', (data) => {
+            this.loadData()
+        });
+    }
+
+    componentWillUnmount() {
+        EventRegister.removeEventListener(this.listener)
+    }
+
+    async loadData() {
         const response = await fetch(`http://192.168.92.1:8080/projeto/usuario`)
         const responseJson = await response.json()
         this.setState({ dados: responseJson })

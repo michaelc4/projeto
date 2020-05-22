@@ -4,7 +4,8 @@ import { getParsedDate, getParsedDateJson, numberToString } from '../util/Util'
 import { Icon, Input } from 'react-native-elements'
 import DateTimePickerModal from "react-native-modal-datetime-picker"
 import Toast from 'react-native-simple-toast'
-import ImageRender from '../componets/ImageRender'
+import ImageRender from '../components/ImageRender'
+import { EventRegister } from 'react-native-event-listeners'
 
 export default class UsuarioScreen extends React.PureComponent {
     static navigationOptions = {
@@ -56,29 +57,44 @@ export default class UsuarioScreen extends React.PureComponent {
             if (usuario.foto != null && usuario.foto.trim() == '') {
                 usuario.foto = null
             }
-            let bodyJson = JSON.stringify(usuario);
             if (usuario.codigo == 0) {
                 let data = {
                     method: 'POST',
-                    body: bodyJson
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(usuario)
                 }
+
                 fetch(`http://192.168.92.1:8080/projeto/usuario`, data)
                     .then((response) => response.json())
-                    .then((responseData) => {
+                    .then((responseJson) => {
+                        EventRegister.emit('reloadData', data);
                         this.props.navigation.navigate('Usuários')
                     })
-                    .done()
+                    .catch((error) => {
+                        console.error(error)
+                    })
             } else {
                 let data = {
                     method: 'PUT',
-                    body: bodyJson
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(usuario)
                 }
+
                 fetch(`http://192.168.92.1:8080/projeto/usuario/${usuario.codigo}`, data)
                     .then((response) => response.json())
-                    .then((responseData) => {
+                    .then((responseJson) => {
+                        EventRegister.emit('reloadData', data);
                         this.props.navigation.navigate('Usuários')
                     })
-                    .done()
+                    .catch((error) => {
+                        console.error(error)
+                    })
             }
         }
     }
@@ -136,7 +152,7 @@ export default class UsuarioScreen extends React.PureComponent {
                         />
                     </View>
                 </View>
-                <View style={{ flexDirection: "row", marginTop: 80 }}>
+                <View style={{ flexDirection: "row", marginTop: 10, marginLeft: 20 }}>
                     <ImageRender foto={usuario.foto} />
                 </View>
                 <TouchableOpacity
@@ -153,7 +169,7 @@ export default class UsuarioScreen extends React.PureComponent {
                         backgroundColor: '#fff',
                         borderRadius: 100,
                     }}
-
+                    onPress={() => this._onPressSave()}
                 >
                     <Icon name="save" size={30} color="#01a699" />
                 </TouchableOpacity>

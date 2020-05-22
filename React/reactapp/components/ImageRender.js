@@ -3,37 +3,44 @@ import { TouchableOpacity, Image } from 'react-native'
 import { SEMIMAGEM } from '../image/image'
 
 export default class ImageRender extends Component {
+
+    _onImagePress = () => {
+
+    }
+
     render() {
         if (this.props.foto == null || this.props.foto.trim() == '') {
             return (
                 <TouchableOpacity
                     style={{
-                        borderWidth: 1,
-                        borderColor: 'rgba(0,0,0,0.2)',
+                        borderWidth: 3,
+                        borderColor: 'black',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        width: 70,
-                        height: 70,
+                        width: 205,
+                        height: 205,
                         backgroundColor: '#fff',
                     }}
+                    onPress={() => this._onImagePress()}
                 >
-                    <Image style={{ height: 200, width: 200 }} source={SEMIMAGEM} />
+                    <Image style={{ height: 200, width: 200, maxWidth: 200, maxHeight: 200 }} source={SEMIMAGEM} />
                 </TouchableOpacity>
             )
         } else {
             return (
                 <TouchableOpacity
                     style={{
-                        borderWidth: 1,
-                        borderColor: 'rgba(0,0,0,0.2)',
+                        borderWidth: 3,
+                        borderColor: 'black',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        width: 70,
-                        height: 70,
+                        width: 205,
+                        height: 205,
                         backgroundColor: '#fff',
                     }}
+                    onPress={() => this._onImagePress()}
                 >
-                    <Image style={{ height: 200, width: 200 }} source={{ uri: `data:image/png;base64,${this.props.foto}` }} />
+                    <Image style={{ height: 200, width: 200, maxWidth: 200, maxHeight: 200 }} source={{ uri: `data:image/png;base64,${this.props.foto}` }} />
                 </TouchableOpacity>
             )
         }
