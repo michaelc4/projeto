@@ -2,6 +2,7 @@ import React from 'react'
 import { TouchableOpacity, View, FlatList, Text, Image } from 'react-native'
 import { getParsedDate } from '../util/Util'
 import { SEMIMAGEM } from '../image/image'
+import { Icon } from 'react-native-elements'
 
 export default class UsuariosScreen extends React.PureComponent {
     static navigationOptions = {
@@ -55,16 +56,40 @@ export default class UsuariosScreen extends React.PureComponent {
         this.props.navigation.navigate('Usuário', { usuario: item })
     }
 
+    _onButtonPress = () => {
+        this.props.navigation.navigate('Usuário', { usuario: null })
+    }
+
     render() {
         return (
-            <FlatList
-                data={this.state.data}
-                renderItem={this._renderItem}
-                keyExtractor={(item) => item.codigo.toString()}
-                ItemSeparatorComponent={() =>
-                    <View style={{ height: 1, backgroundColor: '#f7f7f7' }}
-                    />}
-            />
+            <View style={{ flex: 1 }}>
+                <FlatList
+                    data={this.state.data}
+                    renderItem={this._renderItem}
+                    keyExtractor={(item) => item.codigo.toString()}
+                    ItemSeparatorComponent={() =>
+                        <View style={{ height: 1, backgroundColor: '#f7f7f7' }}
+                        />}
+                />
+                <TouchableOpacity
+                    style={{
+                        borderWidth: 1,
+                        borderColor: 'rgba(0,0,0,0.2)',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: 70,
+                        position: 'absolute',
+                        bottom: 10,
+                        right: 10,
+                        height: 70,
+                        backgroundColor: '#fff',
+                        borderRadius: 100,
+                    }}
+                    onPress={() => this._onButtonPress()}
+                >
+                    <Icon name="add" size={30} color="#01a699" />
+                </TouchableOpacity>
+            </View>
         )
     }
 }
