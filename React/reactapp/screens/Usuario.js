@@ -153,7 +153,11 @@ export default class UsuarioScreen extends React.PureComponent {
                     </View>
                 </View>
                 <View style={{ flexDirection: "row", marginTop: 10, marginLeft: 20 }}>
-                    <ImageRender foto={usuario.foto} />
+                    <ImageRender foto={usuario.foto} onPressItem={(foto) => this.setState(prevState => {
+                        let usuario = Object.assign({}, prevState.usuario);
+                        usuario.foto = foto;
+                        return { usuario, isDatePickerVisible: false };
+                    })} />
                 </View>
                 <TouchableOpacity
                     style={{
