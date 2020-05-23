@@ -1,0 +1,16 @@
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\bin\Debug\netstandard2.0\AppProjeto.deps.json
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\bin\Debug\netstandard2.0\AppProjeto.dll
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\Views\UsuariosPage.xaml.g.cs
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\AppProjeto.csproj.CoreCompileInputs.cache
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\AppProjeto.AssemblyInfoInputs.cache
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\AppProjeto.AssemblyInfo.cs
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\bin\Debug\netstandard2.0\ref\AppProjeto.dll
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\bin\Debug\netstandard2.0\AppProjeto.pdb
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\AppProjeto.dll
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\ref\AppProjeto.dll
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\AppProjeto.pdb
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\AppProjeto.csprojAssemblyReference.cache
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.0\Views\UsuarioPage.xaml.g.cs
