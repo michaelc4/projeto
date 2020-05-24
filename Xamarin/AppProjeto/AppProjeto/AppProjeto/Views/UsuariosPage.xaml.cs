@@ -19,11 +19,14 @@ namespace AppProjeto.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var usuario = args.SelectedItem as UsuarioViewModel;
-            if (usuario == null)
+            var usuario1 = args.SelectedItem as UsuarioViewModel;
+            if (usuario1 == null)
+                return;
+            var usuario2 = usuario1.Clone() as UsuarioViewModel;
+            if (usuario2 == null)
                 return;
 
-            await Navigation.PushAsync(new UsuarioPage(usuario));
+            await Navigation.PushAsync(new UsuarioPage(usuario2));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;

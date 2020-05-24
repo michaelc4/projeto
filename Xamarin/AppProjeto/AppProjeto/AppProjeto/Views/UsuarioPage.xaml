@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:AppProjeto.Util;assembly=AppProjeto"
              mc:Ignorable="d"
              x:Class="AppProjeto.Views.UsuarioPage"
              Title="Usuário">
@@ -19,7 +20,14 @@
             <Label Text="Nome" FontSize="Medium" />
             <Editor Text="{Binding ViewModel.Nome}" d:Text="Nome" FontSize="Medium" Margin="0" />
             <Label Text="Data" FontSize="Medium" />
-            <Editor Text="{Binding ViewModel.Data}" d:Text="Nome" FontSize="Medium" Margin="0" />
+            <StackLayout Orientation="Horizontal">
+                <Editor Text="{Binding ViewModel.Data}" d:Text="Nome" FontSize="Medium" Margin="0" />
+                <ImageButton Source="{local:ImageResourceExtension AppProjeto.calendar.png}" WidthRequest="50" HeightRequest="50" Clicked="Calendar_Clicked" />
+            </StackLayout>
+            <Label Text="Foto" FontSize="Medium" />
+            <StackLayout Grid.Column="3" Orientation="Horizontal" Spacing="10" HorizontalOptions="StartAndExpand">
+                <ImageButton Source="{Binding ViewModel.FotoSource}" WidthRequest="100" HeightRequest="100" BackgroundColor="White" Clicked="Image_Clicked" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 

@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "R7qiuyd8H0p7q4EURYsL5wGay+h1RrfO/g0OOdBV8UkIpemzkHgfp5Oyy6jJF8VbECdwW4z3ojF/XMjeAH1T/Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MyPC\\Documents\\GitHub\\projeto\\Xamarin\\AppProjeto\\AppProjeto\\AppProjeto.iOS\\AppProjeto.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MyPC\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\plugin.permissions\\3.0.0.12\\plugin.permissions.3.0.0.12.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\xam.plugin.media\\4.0.1.5\\xam.plugin.media.4.0.1.5.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\xamarin.essentials\\1.1.0\\xamarin.essentials.1.1.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\xamarin.forms\\4.0.0.425677\\xamarin.forms.4.0.0.425677.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Downgrade de pacote detectado: Xamarin.Essentials de 1.5.3.2 para 1.1.0. Referencie o pacote diretamente do projeto para selecionar uma versão diferente. \r\n AppProjeto.iOS -> AppProjeto -> Xamarin.Essentials (>= 1.5.3.2) \r\n AppProjeto.iOS -> Xamarin.Essentials (>= 1.1.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

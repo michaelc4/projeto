@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,6 +73,14 @@ namespace AppProjeto.Services
                     return true;
                 }
             }
+            catch (WebException ex)
+            {
+                Debug.WriteLine("\tERROR {0}", ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Debug.WriteLine("\tERROR {0}", ex.Message);
+            }
             catch (Exception ex)
             {
                 Debug.WriteLine("\tERROR {0}", ex.Message);
@@ -93,10 +102,19 @@ namespace AppProjeto.Services
                     return true;
                 }
             }
+            catch (WebException ex)
+            {
+                Debug.WriteLine("\tERROR {0}", ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Debug.WriteLine("\tERROR {0}", ex.Message);
+            }
             catch (Exception ex)
             {
                 Debug.WriteLine("\tERROR {0}", ex.Message);
             }
+
 
             return false;
         }
