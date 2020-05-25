@@ -462,4 +462,3 @@ C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.Android\obj\Debug\90\stamp\_ConvertCustomView.stamp
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.Android\obj\Debug\90\stamp\_ConvertLibraryResourcesCases.stamp
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.Android\obj\Debug\90\stamp\_ConvertResourcesCases.stamp
-C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.Android\bin\Debug\AppProjeto.dll.mdb

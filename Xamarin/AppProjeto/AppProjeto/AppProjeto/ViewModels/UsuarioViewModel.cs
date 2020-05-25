@@ -24,29 +24,31 @@ namespace AppProjeto.ViewModels
                 _Foto = value;
                 OnPropertyChanged("Foto");
 
-                if (Foto == null || Foto.Trim() == "")
+                if (_Foto == null || _Foto.Trim() == "")
                 {
                     FotoSource = Xamarin.Forms.ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(base64ImageDefault())));
                     OnPropertyChanged("FotoSource");
                 }
                 else
                 {
-                    FotoSource = Xamarin.Forms.ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(Foto)));
+                    FotoSource = Xamarin.Forms.ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(_Foto)));
                     OnPropertyChanged("FotoSource");
                 }
             }
         }
 
+        public bool CodigoVisible { get; set; }
+
         public UsuarioViewModel(Usuario usuario = null)
         {
             Title = usuario?.Nome;
             Usuario = usuario;
-            Codigo = usuario.Codigo.ToString();
-            Nome = usuario.Nome;
-            Foto = usuario.Foto;
+            Codigo = usuario?.Codigo.ToString();
+            Nome = usuario?.Nome;
+            Foto = usuario?.Foto;
             Data = "";
 
-            if (usuario.Data != null && usuario.Data.Trim() != "")
+            if (usuario?.Data != null && usuario?.Data.Trim() != "")
             {
                 DateTime parsedDate = DateTime.Parse(usuario.Data);
                 Data = parsedDate.ToString("dd/MM/yyyy");

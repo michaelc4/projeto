@@ -5,7 +5,6 @@ C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\bin\Debug\netstandard2.1\Mono.Android.dll
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\bin\Debug\netstandard2.1\Mono.Android.pdb
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\bin\Debug\netstandard2.1\Mono.Android.xml
-C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.1\AppProjeto.csprojAssemblyReference.cache
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.1\App.xaml.g.cs
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.1\Views\MainPage.xaml.g.cs
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto\obj\Debug\netstandard2.1\Views\UsuarioPage.xaml.g.cs

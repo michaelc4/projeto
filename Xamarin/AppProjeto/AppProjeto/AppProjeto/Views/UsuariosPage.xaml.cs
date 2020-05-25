@@ -26,6 +26,7 @@ namespace AppProjeto.Views
             if (usuario2 == null)
                 return;
 
+            usuario2.CodigoVisible = true;
             await Navigation.PushAsync(new UsuarioPage(usuario2));
 
             // Manually deselect item.
@@ -34,7 +35,7 @@ namespace AppProjeto.Views
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new UsuarioPage()));
+            await Navigation.PushAsync(new UsuarioPage());
         }
 
         protected override void OnAppearing()

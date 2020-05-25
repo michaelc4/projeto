@@ -58,3 +58,6 @@ C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.iOS\obj\iPhoneSimulator\Debug\AppProjeto.iOS.csproj.CopyComplete
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.iOS\obj\iPhoneSimulator\Debug\AppProjeto.iOS.exe
 C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.iOS\obj\iPhoneSimulator\Debug\AppProjeto.iOS.pdb
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.iOS\bin\iPhoneSimulator\Debug\AppProjeto.dll.mdb
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.iOS\bin\iPhoneSimulator\Debug\Plugin.Permissions.dll
+C:\Users\MyPC\Documents\GitHub\projeto\Xamarin\AppProjeto\AppProjeto\AppProjeto.iOS\bin\iPhoneSimulator\Debug\Plugin.Media.dll

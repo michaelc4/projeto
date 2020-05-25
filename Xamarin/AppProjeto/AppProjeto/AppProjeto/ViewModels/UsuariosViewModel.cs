@@ -37,6 +37,7 @@ namespace AppProjeto.ViewModels
                 };
 
                 SalvaUsuario(usuario).GetAwaiter();
+                ExecuteLoadItemsCommand().GetAwaiter();
             });
         }
 

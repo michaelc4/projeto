@@ -15,37 +15,46 @@ namespace AppProjeto.Views
 
         public UsuarioPage(UsuarioViewModel viewModel)
         {
+            ViewModel = viewModel;
+
             InitializeComponent();
-
-            this.ViewModel = viewModel;
-
             BindingContext = this;
         }
 
         public UsuarioPage()
         {
-            InitializeComponent();
-
             ViewModel = new UsuarioViewModel
             {
                 Codigo = "",
                 Nome = "",
                 Data = "",
-                Foto = ""
+                Foto = "",
+                CodigoVisible = false
             };
 
+            InitializeComponent();
             BindingContext = this;
         }
 
         async void Save_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "AddItem", ViewModel);
-            await Navigation.PopModalAsync();
+            try
+            {
+                await Navigation.PopAsync();
+            }
+            catch (Exception)
+            { }
         }
 
         async void Cancel_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            try
+            {
+                await Navigation.PopAsync();
+            }
+            catch (Exception)
+            { }
         }
 
         async void Image_Clicked(object sender, EventArgs e)
@@ -75,11 +84,6 @@ namespace AppProjeto.Views
             }
 
             BindingContext = this;
-        }
-
-        async void Calendar_Clicked(object sender, EventArgs e)
-        {
-
         }
     }
 }

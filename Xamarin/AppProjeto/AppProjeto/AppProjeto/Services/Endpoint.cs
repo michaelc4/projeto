@@ -18,6 +18,7 @@ namespace AppProjeto.Services
         public Endpoint()
         {
             _client = new HttpClient();
+            _client.Timeout = TimeSpan.FromMinutes(10);
         }
 
         public async Task<List<Usuario>> GetUsuariosDataAsync()
@@ -114,7 +115,6 @@ namespace AppProjeto.Services
             {
                 Debug.WriteLine("\tERROR {0}", ex.Message);
             }
-
 
             return false;
         }
